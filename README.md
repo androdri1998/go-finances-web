@@ -1,14 +1,14 @@
-# go-finances-web  
+# go-finances-web
 This application as goal list all transactions and import transactions from .csv file.
-  
+
 ## Layouts
-  
-#### Dashboard  
-<img src="/layouts/dashboard.png">  
-  
-#### Import  
-<img src="/layouts/import.png">  
-  
+
+#### Home
+<img src="/layouts/home.png">
+
+#### Import
+<img src="/layouts/import.png">
+
 ## Available Scripts
 
 In the project directory, you can run:
