@@ -1,7 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 interface ContainerProps {
   size?: 'small' | 'large';
+  route: string;
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -22,14 +23,37 @@ export const Container = styled.div<ContainerProps>`
         text-decoration: none;
         font-size: 16px;
         transition: opacity 0.2s;
+        opacity: 0.6;
+        border-bottom: 2px transparent solid;
+        padding-bottom: 10px;
 
         & + a {
           margin-left: 32px;
         }
 
         &:hover {
-          opacity: 0.6;
+          opacity: 0.8;
         }
+      }
+
+      a:nth-child(1) {
+        ${props =>
+          props.route === '/' &&
+          css`
+            border-bottom-color: #ff872c;
+            font-weight: bold;
+            opacity: 1;
+          `}
+      }
+
+      a:nth-child(2) {
+        ${props =>
+          props.route === '/import' &&
+          css`
+            border-bottom-color: #ff872c;
+            font-weight: bold;
+            opacity: 1;
+          `}
       }
     }
   }
